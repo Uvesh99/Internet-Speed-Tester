@@ -18,6 +18,10 @@ app.post('/upload', express.raw({ type: 'application/octet-stream', limit: '50mb
     res.sendStatus(200);
 });
 
+app.get('/',(req,res)=>{
+    res.send("Internet-Speed-Tester");
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
